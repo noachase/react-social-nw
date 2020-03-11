@@ -1,0 +1,12 @@
+.content {
+    grid-area: c;
+    background-color: blue;
+}
+
+.ava {
+    width: 10%;
+}
+
+.item {
+    color: red;
+}

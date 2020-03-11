@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import classes from './App.module.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Profile from './components/Profile';
@@ -7,7 +7,7 @@ import Profile from './components/Profile';
 
 const App = () => {
 	return (
-		<div className='app-wrapper'>
+		<div className={classes.app_wrapper}>
 			<Header/>
 			<Nav/>
 			<Profile/>
