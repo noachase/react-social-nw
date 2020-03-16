@@ -1,0 +1,16 @@
+.item {
+    color: red;
+}
+
+.item img {
+    width: 3em;
+    border-radius: 30px;
+}
+
+.like {
+    color: green;
+}
+
+.likeNumber{
+    color: blue;
+}
