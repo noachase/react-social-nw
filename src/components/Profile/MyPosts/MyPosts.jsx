@@ -5,7 +5,7 @@ import Post from './Post/Post';
 const MyPosts = () => {
 
 	let posts = [
-		{ id: '1', message: ' molodec', likesCount: 12 },
+		{ id: '1', message: 'molodec', likesCount: 12 },
 		{ id: '2', message: 'I will learn React !', likesCount: 2 },
 		{ id: '3', message: 'Bodya molodec', likesCount: 112 },
 		{ id: '4', message: 'Vladik molodec', likesCount: 1 },
