@@ -4,13 +4,18 @@ import Post from './Post/Post';
 
 const MyPosts = (props) => {
 
-	const newPostElement = React.createRef();
+	const newPostElementRef = React.createRef();
 
 	const addPost = () => { 
-		let text = newPostElement.current.value;
-		props.addPost(text);
-		newPostElement.current.value = '';
+		props.addPost();
+		
 	};
+	
+	const onPostChange = () => {
+		let text = newPostElementRef.current.value;
+		props.updateNewPostText(text)
+		
+	} 
 
 	let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount} />)
 
@@ -22,7 +27,7 @@ const MyPosts = (props) => {
 				New Posts
 				</div>
 			<div>
-				<textarea onInput={()=>{console.log('input')}} ref={newPostElement}></textarea>
+				<textarea onChange={onPostChange} ref={newPostElementRef} value = {props.newPostText}></textarea>
 			</div>
 			<div>
 				<button onClick={addPost}>Add post</button>
