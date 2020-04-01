@@ -6,31 +6,32 @@ const MyPosts = (props) => {
 
 	const newPostElementRef = React.createRef();
 
-	const addPost = () => { 
+	const addPost = () => {
 		props.addPost();
-		
+
 	};
-	
+
 	const onPostChange = () => {
 		let text = newPostElementRef.current.value;
 		props.updateNewPostText(text)
-		
-	} 
 
-	let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount} />)
+	}
+
+	let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount} />).reverse()
 
 	return (
 		<div className={classes.posts_block}>
-			<h3>Posts</h3>
+			{/* <h3>Посты</h3> */}
 
+			<div className={classes.myposts}> <h1>Новые посты</h1></div>
 			<div>
-				New Posts
+				<div>
+					<textarea rows="4" cols="40" onChange={onPostChange} ref={newPostElementRef} value={props.newPostText}></textarea>
 				</div>
-			<div>
-				<textarea onChange={onPostChange} ref={newPostElementRef} value = {props.newPostText}></textarea>
-			</div>
-			<div>
-				<button onClick={addPost}>Add post</button>
+				<div>
+					<button className={classes.addPostBtn} onClick={addPost}>Add post</button>
+				</div>
+
 			</div>
 			<div className={classes.post}>
 				{postsElements}

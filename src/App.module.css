@@ -11,7 +11,8 @@
 }
 .app_wrapper_content {
     grid-area: c;
-    background-color: #fff;
+    background-color: rgba(0, 0, 0, .9);
+    border: 1px black solid
 }
 
 

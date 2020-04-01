@@ -1,10 +1,13 @@
 .item {
     color: red;
+    margin-bottom: 20px;
+    
 }
 
 .item img {
     width: 3em;
-    border-radius: 30px;
+    border-radius: 30%;
+    padding-right: 10px;
 }
 
 .like {
@@ -12,5 +15,6 @@
 }
 
 .likeNumber{
-    color: blue;
+    color: #fff;
+    
 }

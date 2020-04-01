@@ -10,7 +10,7 @@ const Friends = (props) => {
     let friendsElements = props.state.friends.map(f => <Friend friend={f.name} />)
 
     return (
-        <div>
+        <div className={classes.item}>
             <br />
 
             <div className={classes.friends}>

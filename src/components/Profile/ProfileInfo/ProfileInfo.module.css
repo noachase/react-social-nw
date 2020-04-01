@@ -1,9 +1,16 @@
 .ava {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 10%;
-    margin-right: 10px;
+    
 }
 .description_block {
+    
     padding: 10px;
 }
-
+h3{
+    text-align: center;
+    text-shadow: 1px 1px 1px rgb(95, 241, 120);
+}
 
