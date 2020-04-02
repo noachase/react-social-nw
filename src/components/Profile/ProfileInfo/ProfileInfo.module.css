@@ -9,8 +9,10 @@
     
     padding: 10px;
 }
-h3{
+h3 {
     text-align: center;
+    font-size: 1.5em;
+    letter-spacing: .2em;
     text-shadow: 1px 1px 1px rgb(95, 241, 120);
 }
 

@@ -11,7 +11,7 @@ const ProfileInfo = (props) => {
 				<img className={classes.ava} alt="avatar" src="https://t3.ftcdn.net/jpg/02/07/81/58/500_F_207815811_sd457h9jJdOz9Xy0UOmvosVpi4Va2BSk.jpg" />
 			
 			</div>
-			<h3>Eugene Markelov</h3>
+			<h3 className="name">Eugene Markelov</h3>
 			
 		</div>
 	)

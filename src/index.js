@@ -14,7 +14,6 @@ const rerenderEntireTree = (state) => {
             <App
                 state={state}
                 dispatch={store.dispatch.bind(store)}
-                updateNewMsgText={store.updateNewMsgText.bind(store)}
                 store={store}
             />, 
         </BrowserRouter>,document.getElementById('root'));

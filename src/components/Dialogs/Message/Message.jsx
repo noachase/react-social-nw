@@ -24,8 +24,8 @@ const Message = (props) => {
             <div>
                 <textarea onChange={onMessageChange} ref={messageElementRef} value={props.newDialogMsg}></textarea>
             </div>
-            <div>
-                <button onClick={sendMsg}>Send</button>
+            <div className={classes.btnContainer}>
+                <button className={classes.btnSend} onClick={sendMsg}>Send</button>
             </div>
 
         </div>
