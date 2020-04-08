@@ -1,32 +1,30 @@
 import React from 'react';
-import classes from './../Dialogs.module.css';
+// import classes from './../Dialogs.module.css';
 
 const Message = (props) => {
     // debugger
-    const messageElementRef = React.createRef();
+    // const messageElementRef = React.createRef();
 
-    const sendMsg = () => {
-        const msg = messageElementRef.current.value;
-        alert(msg)
-    };
+    // const sendMsg = () => {
+    //     const msg = messageElementRef.current.value;
+    //     alert(msg)
+    // };
 
-    let onMessageChange = () => {
-        const msg = messageElementRef.current.value;
-        // props.updateNewMsgText(msg);
-        console.log(props.newDialogMsg);
-        console.log(msg);
-    }
+    // let onMessageChange = () => {
+    //     const msg = messageElementRef.current.value;
+    //     // props.updateNewMsgText(msg);
+    //     console.log(props.newDialogMsg);
+    //     console.log(msg);
+    // }
 
     return (
-        <div className={classes.message}>
+        <div>
 
-            {/* {props.message} */}
-            <div>
-                <textarea onChange={onMessageChange} ref={messageElementRef} value={props.newDialogMsg}></textarea>
+            {props.message}
+            <div value={props.newDialogMsg}>
+                
             </div>
-            <div className={classes.btnContainer}>
-                <button className={classes.btnSend} onClick={sendMsg}>Send</button>
-            </div>
+            
 
         </div>
     )

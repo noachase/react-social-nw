@@ -34,7 +34,7 @@
 }
 
 .message {
-    padding: 20px;
+    padding: 40px;
     color: grey;
 }
 
@@ -44,7 +44,7 @@
 
 .btnSend {
     display: block;
-    transform: translate(100%, 0);
+    /* transform: translate(100%, 0); */
     border: none;
     border-radius: 4px;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
