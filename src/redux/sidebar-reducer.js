@@ -1,17 +1,24 @@
+const FRIEND_LIST = 'FRIEND_LIST';
+
 let initialState = {
     friends: [
-        { name: 'Vladik' },
-        { name: 'Bodich' },
-        { name: 'Sergei' },
-        { name: 'Sergei' }
+        { name: 'Vladik', id: 1 },
+        { name: 'Bodich', id: 2 },
+        { name: 'Sergei', id: 3 },
+        { name: 'Sergei', id: 4 }
     ]
 };
 
 
 const sidebarReducer = (state = initialState, action) => {
-
-
-    return state
+    // switch (action.type) {
+    //     case FRIEND_LIST:
+    //         state.friends = state.friends;
+    //         return state;
+    //     default:
+    //         return state;    
+    // }
+    return state;
 }
 
 export default sidebarReducer;

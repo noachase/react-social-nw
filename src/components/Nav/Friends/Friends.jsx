@@ -6,8 +6,8 @@ import Friend from './Friend/Friend';
 
 const Friends = (props) => {
     // console.log(props)
-// debugger;
-    let friendsElements = props.state.friends.map(f => <Friend friend={f.name} />)
+    const state = props.friends
+    const friendsElements = state.friends.map(f => <Friend friend={f.name} key={f.id} />)
 
     return (
         <div className={classes.item}>

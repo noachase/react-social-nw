@@ -3,12 +3,12 @@ const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 
 const initialState = {
     posts: [
-        { id: '1', message: 'molodec', likesCount: 12 },
-        { id: '2', message: 'I will learn React !', likesCount: 2 },
-        { id: '3', message: 'Bodya molodec', likesCount: 112 },
-        { id: '4', message: 'Vladik molodec', likesCount: 1 },
-        { id: '5', message: 'Serega molodec', likesCount: 12 },
-        { id: '6', message: 'Olya molodec', likesCount: 12 }
+        { id: 1, message: 'molodec', likesCount: 12 },
+        { id: 2, message: 'I will learn React !', likesCount: 2 },
+        { id: 3, message: 'Bodya molodec', likesCount: 112 },
+        { id: 4, message: 'Vladik molodec', likesCount: 1 },
+        { id: 5, message: 'Serega molodec', likesCount: 12 },
+        { id: 6, message: 'Olya molodec', likesCount: 12 }
     ],
     newPostText: 'kamasutra',
 };
@@ -16,18 +16,29 @@ const initialState = {
 const profileReducer = (state = initialState, action) => {
 
     switch (action.type) {
-        case ADD_POST:
+        case ADD_POST: {
+
             let newPost = {
-                id: 5,
+                id: 7,
                 message: state.newPostText,
                 likesCount: 0
             }
-            state.posts.push(newPost);
-            state.newPostText = '';
-            return state;
-        case UPDATE_NEW_POST_TEXT:
-            state.newPostText = action.newText;
-            return state;
+
+            let stateCopy = {
+                ...state,
+                posts: [...state.posts, newPost],
+                newPostText: ''
+            };
+
+            return stateCopy;
+        }
+        
+        case UPDATE_NEW_POST_TEXT: 
+            return {
+                ...state,
+                newPostText: action.newText
+            };
+        
         default:
             return state;
     }

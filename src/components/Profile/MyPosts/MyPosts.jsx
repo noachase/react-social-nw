@@ -1,7 +1,6 @@
 import React from 'react';
 import classes from './MyPosts.module.css';
 import Post from './Post/Post';
-import { addPostActionCreator, updateNewPostTextActionCreator} from '../../../redux/profile-reducer'
 
 
 const MyPosts = (props) => {
@@ -19,7 +18,7 @@ const MyPosts = (props) => {
 		props.updateNewPostText(text);
 	}
 
-	let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount} />).reverse()
+	let postsElements = props.posts.map(p => <Post message={p.message} likesCount={p.likesCount} key={p.id} />).reverse()
 
 	return (
 		<div className={classes.posts_block}>
