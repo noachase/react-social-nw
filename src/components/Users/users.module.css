@@ -8,6 +8,16 @@ div {
     color: wheat
 }
 .btnFollow {
+    background-color: rgba(0, 0, 255, 0.527);
+    color: white;
+    display: block;
+    border: none;
+    border-radius: 4px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.btnUnfollow {
     display: block;
     border: none;
     border-radius: 4px;
