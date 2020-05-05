@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './users.module.css';
 import * as axios from 'axios';
 import userPhoto from '../../assets/images/user.jpg';
+import Loader from '../../Loader/Loader'
 
 class Users extends React.Component {
 
@@ -13,6 +14,7 @@ class Users extends React.Component {
             .then(response => {
                 this.props.setUsers(response.data.items)
             });
+        
     }
 
 

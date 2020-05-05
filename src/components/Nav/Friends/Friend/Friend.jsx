@@ -1,15 +1,16 @@
 import React from 'react';
 // import classes from './Friend.module.css';
-// import { NavLink } from 'react-router-dom';
 
-const Friend = (props) => {
-    return (
-        <div>
-            {props.friend}
-        </div>
-
-
-    )
+class Friend extends React.Component {
+    render() {
+        return (
+            <div>
+                {this.props.friend}
+            </div>
+        )
+    }
 }
+
+
 
 export default Friend;
