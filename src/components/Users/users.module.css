@@ -35,6 +35,14 @@ div {
     /* margin: 0 auto; */
 }
 .userName{
-    color: rgb(253, 200, 101);
+    color: #fdc865;
     font-weight: bold;
+}
+.selectedPage{
+    color: #fdc865;
+    font-weight: bold;
+    cursor: pointer;
+}
+.currentPage {
+    cursor: pointer;
 }
